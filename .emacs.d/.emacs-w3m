@@ -1,0 +1,4 @@
+; Fix the CYGWIN environment variable
+(when (eq system-type 'windows-nt)
+  (setcdr (assoc "CYGWIN" w3m-command-environment)
+	  "binmode"))
